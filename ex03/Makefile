@@ -6,7 +6,7 @@
 #    By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 18:01:32 by fnichola          #+#    #+#              #
-#    Updated: 2022/09/13 03:19:27 by fnichola         ###   ########.fr        #
+#    Updated: 2022/09/13 03:18:32 by fnichola         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,9 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
 
 SRCS = main.cpp \
-	Zombie.cpp \
-	newZombie.cpp \
-	randomChump.cpp
+	Weapon.cpp \
+	HumanA.cpp \
+	HumanB.cpp
 
 ifdef WITH_BONUS
 endif

@@ -6,7 +6,7 @@
 #    By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 18:01:32 by fnichola          #+#    #+#              #
-#    Updated: 2022/09/13 02:31:29 by fnichola         ###   ########.fr        #
+#    Updated: 2022/09/13 03:18:52 by fnichola         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
-%.o: %.c
+%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -I includes -o $@ -c $<
 	
 $(NAME): $(OBJS)
