@@ -6,14 +6,14 @@
 #    By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 18:01:32 by fnichola          #+#    #+#              #
-#    Updated: 2022/09/13 03:19:27 by fnichola         ###   ########.fr        #
+#    Updated: 2022/09/13 06:04:09 by fnichola         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = a.out
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
+CXXFLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp \
 	Zombie.cpp \
@@ -24,11 +24,12 @@ ifdef WITH_BONUS
 endif
 
 OBJS = $(SRCS:.cpp=.o)
+DEPS = $(SRCS:.c=.d)
 
 all: $(NAME)
 
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -I includes -o $@ -c $<
+	$(CXX) $(CXXFLAGS) -MMD -MP -I includes -o $@ -c $<
 	
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -I includes -o $(NAME)
@@ -42,3 +43,5 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re bonus
+
+-include $(DEPS)

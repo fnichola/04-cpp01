@@ -17,14 +17,14 @@ class Zombie
 	// Operators
 		Zombie& operator=(const Zombie& assign);
 
-		void announce(void);
-	
 	// Getters
 		std::string get_name(void) const;
 
 	// Setters
 		void set_name(std::string name);
 
+	// Other
+		void announce(void);
 
 	private:
 		std::string m_name;
