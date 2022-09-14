@@ -6,7 +6,7 @@
 #    By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 18:01:32 by fnichola          #+#    #+#              #
-#    Updated: 2022/09/14 06:04:28 by fnichola         ###   ########.fr        #
+#    Updated: 2022/09/14 06:08:44 by fnichola         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = a.out
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
 
-SRCS = main.cpp \
+SRCS = source/main.cpp \
 	source/Weapon.cpp \
 	source/HumanA.cpp \
 	source/HumanB.cpp

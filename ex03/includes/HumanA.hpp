@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 02:59:58 by fnichola          #+#    #+#             */
-/*   Updated: 2022/09/13 05:42:49 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/09/14 08:14:47 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class HumanA
 		HumanA& operator=(const HumanA& assign);
 
 	// Other
-		void attack();
+		void attack() const;
 
 	private:
 		std::string m_name;

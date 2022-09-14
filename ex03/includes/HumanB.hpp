@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 02:59:58 by fnichola          #+#    #+#             */
-/*   Updated: 2022/09/13 04:56:34 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/09/14 08:15:14 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ class HumanB
 		HumanB& operator=(const HumanB& assign);
 
 	// Other
-		void attack();
+		void attack() const;
 		void setWeapon(const Weapon& newWeapon);
 
 	private:
 		std::string m_name;
-		Weapon* m_weapon;
+		const Weapon* m_weapon;
 };
 
 #endif // HUMANB_HPP
