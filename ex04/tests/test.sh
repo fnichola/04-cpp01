@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NAME=./a.out
+NAME=../a.out
 
 print_test_header()
 {
