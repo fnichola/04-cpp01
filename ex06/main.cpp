@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 01:47:40 by fnichola          #+#    #+#             */
-/*   Updated: 2022/11/28 04:52:02 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/11/28 05:16:55 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,19 @@ void harlFilter(char *level)
 	{
 		case 0:
 			harl.complain("DEBUG");
+			#ifdef __linux__
 			__attribute__ ((fallthrough));
+			#endif
 		case 1:
 			harl.complain("INFO");
+			#ifdef __linux__
 			__attribute__ ((fallthrough));
+			#endif
 		case 2:
 			harl.complain("WARNING");
+			#ifdef __linux__
 			__attribute__ ((fallthrough));
+			#endif
 		case 3:
 			harl.complain("ERROR");
 			break;

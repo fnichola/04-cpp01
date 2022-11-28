@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 01:47:40 by fnichola          #+#    #+#             */
-/*   Updated: 2022/09/16 02:50:38 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/11/28 05:21:40 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@ void replace(const char* cFilename, const char* cS1, const char* cS2)
 	std::string filename(cFilename);
 	std::string line;
 	
+	if (s1.length() == 0)
+	{
+		std::cerr << "Error: First argument cannot be blank" << std::endl;
+		return ;
+	}
 	std::ifstream inFile(filename.c_str());
 	if (!inFile.good())
 	{
@@ -31,11 +36,6 @@ void replace(const char* cFilename, const char* cS1, const char* cS2)
 	if (!outFile.good())
 	{
 		std::perror("Error: Can't open output file");
-		return ;
-	}
-	if (s1.length() == 0)
-	{
-		std::cerr << "Error: First argument cannot be blank" << std::endl;
 		return ;
 	}
 	while(std::getline(inFile, line))
