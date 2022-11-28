@@ -1,38 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 03:31:03 by fnichola          #+#    #+#             */
-/*   Updated: 2022/09/14 08:14:04 by fnichola         ###   ########.fr       */
+/*   Created: 2022/09/16 02:49:52 by fnichola          #+#    #+#             */
+/*   Updated: 2022/11/28 04:59:23 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-Weapon::Weapon(const Weapon &other) : m_type(other.m_type) {}
-
-Weapon::Weapon(const std::string type)
+class Harl
 {
-	m_type = type;
-}
+	public:
+		Harl();
+		Harl(const Harl& other);
+		~Harl();
+		Harl& operator=(const Harl& assign);
 
-Weapon::~Weapon() {}
+		void complain(std::string level);
 
-Weapon &Weapon::operator=(const Weapon &assign)
-{
-  m_type = assign.m_type;
-  return *this;
-}
+	private:
+		void debug(void);
+		void info(void);
+		void warning(void);
+		void error(void);
 
-const std::string &Weapon::getType() const
-{
-	return m_type;
-}
 
-void Weapon::setType(const std::string &type)
-{
-	m_type = type;
-}
+	typedef struct s_funcTable {
+		std::string level;
+		void (Harl::*function)(void);
+	} t_funcTable;
+};
+
+
+#endif

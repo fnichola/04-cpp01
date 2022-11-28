@@ -6,19 +6,19 @@
 #    By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 18:01:32 by fnichola          #+#    #+#              #
-#    Updated: 2022/09/14 06:08:44 by fnichola         ###   ########.fr        #
+#    Updated: 2022/11/28 05:05:56 by fnichola         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = a.out
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
+CXXFLAGS = -Wall -Wextra -Werror
 
-SRCS = source/main.cpp \
-	source/Weapon.cpp \
-	source/HumanA.cpp \
-	source/HumanB.cpp
+SRCS = main.cpp \
+	Weapon.cpp \
+	HumanA.cpp \
+	HumanB.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(SRCS:.cpp=.d)
@@ -26,10 +26,10 @@ DEPS = $(SRCS:.cpp=.d)
 all: $(NAME)
 
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -MMD -MP -I includes -o $@ -c $<
+	$(CXX) $(CXXFLAGS) -MMD -MP -o $@ -c $<
 	
 $(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -I includes -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	$(RM) $(OBJS) $(DEPS)

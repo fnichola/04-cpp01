@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 03:06:09 by fnichola          #+#    #+#             */
-/*   Updated: 2022/09/14 08:14:52 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/11/28 02:40:21 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ HumanA &HumanA::operator=(const HumanA &assign)
   return *this;
 }
 
-void HumanA::attack() const
+void HumanA::Attack() const
 {
-  std::cout << m_name << " attacks with their " << m_weapon.getType() << std::endl;
+  std::cout << m_name << " attacks with their " << m_weapon.GetType() << std::endl;
 }

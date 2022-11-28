@@ -6,7 +6,7 @@
 #    By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 18:01:32 by fnichola          #+#    #+#              #
-#    Updated: 2022/09/14 06:08:46 by fnichola         ###   ########.fr        #
+#    Updated: 2022/11/28 05:06:34 by fnichola         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,10 +28,10 @@ DEPS = $(SRCS:.cpp=.d)
 all: $(NAME)
 
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -MMD -MP -I includes -o $@ -c $<
+	$(CXX) $(CXXFLAGS) -MMD -MP -o $@ -c $<
 	
 $(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -I includes -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	$(RM) $(OBJS) $(DEPS)

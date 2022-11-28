@@ -5,28 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 02:12:18 by fnichola          #+#    #+#             */
-/*   Updated: 2022/11/28 02:33:04 by fnichola         ###   ########.fr       */
+/*   Created: 2022/09/15 01:47:40 by fnichola          #+#    #+#             */
+/*   Updated: 2022/11/28 05:03:58 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
-#include <iostream>
+#include "Harl.hpp"
 
 int main(void)
 {
-	std::string str = "HI THIS IS BRAIN";
-	std::string *stringPTR = &str;
-	std::string &stringREF = str;
-
-	std::cout << "Memory Addresses:" << std::endl \
-		<< "\tstr: " << &str << std::endl \
-		<< "\tptr: " << stringPTR << std::endl \
-		<< "\tref: " << &stringREF << std::endl;
-
-	std::cout << std::endl \
-		<< "Values: " << std::endl \
-		<< "\tstr: " << str << std::endl \
-		<< "\tptr: " << *stringPTR << std::endl \
-		<< "\tref: " << stringREF << std::endl;
+	Harl harl;
+	
+	std::cout << "--------------------------" << std::endl;
+	std::cout << "Basic Test" << std::endl;
+	std::cout << "--------------------------" << std::endl;
+	harl.complain("DEBUG");
+	harl.complain("INFO");
+	harl.complain("WARNING");
+	harl.complain("ERROR");
+	return (0);
 }

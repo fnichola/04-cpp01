@@ -1,43 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 02:59:58 by fnichola          #+#    #+#             */
-/*   Updated: 2022/09/14 08:15:14 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/11/28 02:52:23 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-# define HUMANB_HPP
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
 # include <string>
 # include <iostream>
 # include "Weapon.hpp"
 
-class HumanB
+class HumanA
 {
 	public:
 	// Constructors
-		HumanB();
-		HumanB(const HumanB& other);
-		HumanB(const std::string& name);
+		HumanA(const std::string& name, Weapon& weapon);
+		HumanA(const HumanA& other);
 
 	// Destructor
-		~HumanB();
+		~HumanA();
 
 	// Operators
-		HumanB& operator=(const HumanB& assign);
+		HumanA& operator=(const HumanA& assign);
 
 	// Other
-		void attack() const;
-		void setWeapon(const Weapon& newWeapon);
+		void Attack() const;
 
 	private:
 		std::string m_name;
-		const Weapon* m_weapon;
+		Weapon& m_weapon;
 };
-
-#endif // HUMANB_HPP
+#endif // HUMANA_HPP

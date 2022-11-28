@@ -2,13 +2,11 @@
 
 Zombie::Zombie(void)
 {
-	
 }
 
 Zombie::Zombie(const Zombie& other)
 : m_name(other.m_name)
 {
-	
 }
 
 Zombie::~Zombie()

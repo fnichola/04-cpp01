@@ -5,10 +5,9 @@
 // Allocate a new Zombie and return it for use outside of the function.
 Zombie* newZombie(std::string name)
 {
-	Zombie* newZombie;
-	newZombie = new Zombie;
+	Zombie* zombie = new Zombie;
 
-	newZombie->set_name(name);
-	newZombie->announce();
-	return (newZombie);
+	zombie->set_name(name);
+	zombie->announce();
+	return (zombie);
 }

@@ -6,12 +6,11 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 01:47:40 by fnichola          #+#    #+#             */
-/*   Updated: 2022/09/15 06:23:15 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/09/16 02:50:38 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
-#include <cstring>
 #include <fstream>
 #include <iostream>
 

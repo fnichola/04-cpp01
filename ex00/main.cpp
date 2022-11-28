@@ -32,6 +32,7 @@ int main( void )
 
 	z3.set_name("Billy");
 	Zombie z4 = z3;
+	std::cout << std::endl;
 	std::cout << "----------------------------" << std::endl;
 	std::cout << "Zombie z4 = z3, should be a duplicate." << std::endl;
 	std::cout << "----------------------------" << std::endl;
@@ -40,7 +41,8 @@ int main( void )
 
 	std::cout << std::endl;
 	std::cout << "----------------------------" << std::endl;
-	std::cout << "Rename z3 and z4 to check they're unique copies.\nShould auto destroy when out of scope" << std::endl;
+	std::cout << "Rename z3 and z4 to check they're unique copies.\n"
+		"Should auto destroy when out of scope" << std::endl;
 	std::cout << "----------------------------" << std::endl;
 	z3.set_name("Billy the 1st");
 	z4.set_name("Billy the 2nd");

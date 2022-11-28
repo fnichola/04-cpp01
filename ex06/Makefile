@@ -6,16 +6,17 @@
 #    By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 18:01:32 by fnichola          #+#    #+#              #
-#    Updated: 2022/11/28 05:05:35 by fnichola         ###   ########.fr        #
+#    Updated: 2022/11/28 05:07:36 by fnichola         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = a.out
+NAME = harlFilter
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror
 
-SRCS = main.cpp
+SRCS = main.cpp \
+	Harl.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(SRCS:.cpp=.d)

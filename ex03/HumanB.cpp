@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 03:06:09 by fnichola          #+#    #+#             */
-/*   Updated: 2022/09/14 08:15:24 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/11/28 02:45:07 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ HumanB &HumanB::operator=(const HumanB &assign)
   return *this;
 }
 
-void HumanB::setWeapon(const Weapon& newWeapon)
+void HumanB::SetWeapon(const Weapon& newWeapon)
 {
 	m_weapon = &newWeapon;
 }
 
-void HumanB::attack() const
+void HumanB::Attack() const
 {
-  std::cout << m_name << " attacks with their " << m_weapon->getType()
+  std::cout << m_name << " attacks with their " << m_weapon->GetType()
             << std::endl;
 }
